@@ -197,6 +197,7 @@ main p {
     #foto {
         width: 200px;
         height: 200px;
+        overflow: hidden;
     }
 
     #foto::before{
@@ -240,6 +241,7 @@ main p {
     #foto {
         width: 135px;
         height: 135px;
+        overflow: hidden;
     }
 
     #foto::before{
