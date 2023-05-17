@@ -208,6 +208,23 @@ main p {
         transition: 0.5s;
         animation: animate 4s linear infinite;
     }
+    #foto::after{
+        content: '';
+        position: absolute;
+        inset: 6px;
+        background: #3f3f3f;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    .content{
+        position: absolute;
+        inset: 30px;
+        border: 6px solid #070a1c;
+        z-index: 3;
+        border-radius: 50%;
+        overflow: hidden;
+    }
 
     .informacion {
         width: 50%;
@@ -258,6 +275,23 @@ main p {
         padding: 5%;
         margin-left: 10px;
         font-size: x-small;
+    }
+    #foto::after{
+        content: '';
+        position: absolute;
+        inset: 6px;
+        background: #3f3f3f;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    .content{
+        position: absolute;
+        inset: 30px;
+        border: 6px solid #070a1c;
+        z-index: 3;
+        border-radius: 50%;
+        overflow: hidden;
     }
 
     main p {
