@@ -1,3 +1,53 @@
+/*Estilo de loader*/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 4px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Estio barra de scroll*/
+::-webkit-scrollbar {
+    background-color: #000000;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #88888855;
+    width: 10px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #727272;
+}
+
 /*Estilos generales*/
 * {
     margin: 0;
@@ -8,7 +58,7 @@
 @font-face {
     font-family: "Montserrat";
     src: url("Montserrat.otf");
-} 
+}
 
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -182,17 +232,12 @@ main p {
     height: auto;
 }
 
-
-
-
 /*--------------------Estilos Footer-------------------*/
 
-
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #070a1c;
+    padding: 20px 0;
+    text-align: center;
 }
 
 footer p {
@@ -202,18 +247,46 @@ footer p {
     margin: 0;
     padding: 0;
 }
-/*--------------------Estilos Skills-------------------*/
 
+footer .icons {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #868686;
+}
 
-#skills {
+footer .icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer .icons a:hover {
+    text-decoration: underline;
+}
+
+/*--------------------Estilos Skills, Contact-------------------*/
+
+#skills,
+#contact {
     margin-top: 2%;
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 2%;
-
+    display: flex;
+    flex-direction: column;
 }
 
-.container-zone{
+#skills h1,
+#contact h1 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3%;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.container-zone {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -232,9 +305,9 @@ footer p {
     margin-right: 30px;
 }
 
-.zone h2{
+.zone h2 {
     border-bottom: 5px solid white;
-    border-bottom-style:double ;
+    border-bottom-style: double;
     margin-bottom: 5%;
     width: auto;
 }
@@ -245,36 +318,34 @@ footer p {
     list-style: none;
 }
 
-.zone .left,.right{
-    margin-bottom: 1%;
-    border-bottom: 1px solid white;
-    border-bottom-style:dashed ;
+.zone .left,
+.right {
+    margin-bottom: 10px;
 }
 
-.zone .left h3{
+.zone .left h3 {
     text-align: left;
     border-bottom: 1px solid white;
     margin-bottom: 1.5%;
     width: fit-content;
 }
 
-.zone .right h3{
+.zone .right h3 {
     text-align: right;
     width: fit-content;
     margin-left: auto;
     border-bottom: 1px solid white;
     margin-bottom: 1.5%;
-
 }
 
-.zone .left .icons-container li{
+.zone .left .icons-container li {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 2% 0;
 }
 
-.zone .right .icons-container li{
+.zone .right .icons-container li {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -293,12 +364,67 @@ footer p {
     margin-left: 4%;
 }
 
+/*---------------------------Estilos form de contact----------------------------*/
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-inline: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #222;
+    background-image: linear-gradient(45deg, #5162742a, #1a25336a);
+    color: #fff;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3469db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #2941b9;
+}
 
 /*--------------------Estilos @media-------------------*/
 /*--------------------Dejar siempre al final-------------------*/
 @media (max-width: 850px) {
-
     header {
         flex-direction: row;
         align-items: center;
@@ -367,14 +493,15 @@ footer p {
         padding: 5%;
         margin-left: 10px;
     }
-    
+
     .container-zone {
         display: flex;
         width: 100%;
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-    }  
+    }
+
     .zone {
         width: 100%;
         height: auto;
@@ -382,9 +509,10 @@ footer p {
         background-color: #222;
         background-image: linear-gradient(45deg, #5162742a, #1a25336a);
         color: #fff;
-        padding: 20px;
         text-align: center;
         margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     footer p {
@@ -469,6 +597,30 @@ footer p {
         margin: 5%;
         font-size: small;
     }
+
+    .zone h2 {
+        border-bottom: 5px solid white;
+        border-bottom-style: double;
+        width: auto;
+        font-size: medium;
+    }
+
+    .zone .left h3 {
+        text-align: left;
+        border-bottom: 1px solid white;
+        margin-bottom: 1.5%;
+        width: fit-content;
+        font-size: small;
+    }
+
+    .zone .right h3 {
+        text-align: right;
+        width: fit-content;
+        margin-left: auto;
+        border-bottom: 1px solid white;
+        margin-bottom: 1.5%;
+        font-size: small;
+    }
 }
 
 @media screen and (orientation: landscape) {
@@ -476,5 +628,29 @@ footer p {
         flex-direction: row;
         align-items: center;
         height: 110%;
+    }
+
+    .zone h2 {
+        border-bottom: 5px solid white;
+        border-bottom-style: double;
+        width: auto;
+        font-size: large;
+    }
+
+    .zone .left h3 {
+        text-align: left;
+        border-bottom: 1px solid white;
+        margin-bottom: 1.5%;
+        width: fit-content;
+        font-size: medium;
+    }
+
+    .zone .right h3 {
+        text-align: right;
+        width: fit-content;
+        margin-left: auto;
+        border-bottom: 1px solid white;
+        margin-bottom: 1.5%;
+        font-size: medium;
     }
 }
