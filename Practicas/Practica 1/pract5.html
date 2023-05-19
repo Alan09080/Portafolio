@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titulo de la Página. </title>
+        <style>
+            /*Estilos generales*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @font-face {
+            font-family: "Montserrat";
+            src: url("Montserrat.otf");
+        }
+        body {
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(45deg, #4e4e4e, #000000);
+            color: #ffffff;
+            padding: 10px;
+            border-bottom: rgb(66, 66, 66) 5px outset;
+        }
+        
+        header img {
+            height: 40px;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav li {
+            margin: 0 10px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, #006195 90%, #006195 100%);
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-position-x: right;
+            transition: background-size 300ms;
+        }
+        
+        nav a:hover {
+            background-size: 100% 100%;
+            background-position-x: left;
+        }
+        
+        
+        
+        </style>
+        </head>
+        <body>
+            <header>
+                <img src="imagenes/icono.png" alt="Logo" />
+                <nav>
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="Skills.html">Skills</a></li>
+                        <li><a href="Proyects.html">Proyects</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+<h1>Este es un encabezado 1</h1>
+<p>Este es algún texto. </p>
+<hr>
+<h2>Este es un encabezado 2</h2>
+<p>Este es otro texto. </p>
+<hr>
+<h3>Este es un encabezado 3</h3>
+<p>Este es algún otro texto. </p>
+
+</body>
+</html>
