@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.boton {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 9999;
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			text-decoration: none;
+			border-radius: 4px;
+		}
+	</style>
+	<title>Mapa de imagen con colores</title>
+</head>
+
+<body>
+	<a href="/Practices.html" class="boton">Back</a>
+	<h1>Figuras geométricas</h1>
+
+	<img src="https://educaimagenes.com/wp-content/uploads/2021/04/area-y-perimetro-figuras-geometricas-600x408.png"
+		alt="Figuras geométricas" usemap="#figuras">
+
+	<map name="figuras">
+		<area shape="rect" coords="25,52,156,182" href="https://es.wikipedia.org/wiki/Cuadrado" alt="Cuadrado"
+			style="outline-color: red; outline-style: solid;">
+		<area shape="poly" coords="295,53,212,194,377,194" href="https://es.wikipedia.org/wiki/Tri%C3%A1ngulo"
+			alt="Triángulo" style="outline-color: blue; outline-style: solid;">
+		<area shape="poly" coords="486,73,566,131,536,225,437,225,407,131"
+			href="https://es.wikipedia.org/wiki/Pent%C3%A1gono" alt="Pentágono"
+			style="outline-color: green; outline-style: solid;">
+		<area shape="circle" coords="94,275,68" href="https://es.wikipedia.org/wiki/C%C3%ADrculo" alt="Círculo"
+			style="outline-color: yellow; outline-style: solid;">
+		<area shape="poly" coords="233,246,311,246,351,314,311,381,233,381,195,314"
+			href="https://es.wikipedia.org/wiki/Hex%C3%A1gono" alt="Hexágono"
+			style="outline-color: orange; outline-style: solid;">
+		<area shape="rect" coords="388,270,584,357" href="https://es.wikipedia.org/wiki/Rect%C3%A1ngulo"
+			alt="Rectángulo" style="outline-color: purple; outline-style: solid;">
+	</map>
+
+</body>
+
+</html>

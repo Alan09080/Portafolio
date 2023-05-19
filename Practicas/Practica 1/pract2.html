@@ -1,86 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Titulo de la Página. </title>
-        <style>
-            /*Estilos generales*/
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        @font-face {
-            font-family: "Montserrat";
-            src: url("Montserrat.otf");
-        }
-        body {
-            font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: linear-gradient(45deg, #4e4e4e, #000000);
-            color: #ffffff;
-            padding: 10px;
-            border-bottom: rgb(66, 66, 66) 5px outset;
-        }
-        
-        header img {
-            height: 40px;
-        }
-        
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        
-        nav li {
-            margin: 0 10px;
-        }
-        
-        nav a {
-            color: #fff;
+
+<head>
+    <style>
+        .boton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            padding: 10px;
-            background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, #006195 90%, #006195 100%);
-            background-repeat: no-repeat;
-            background-size: 0% 100%;
-            background-position-x: right;
-            transition: background-size 300ms;
+            border-radius: 4px;
         }
-        
-        nav a:hover {
-            background-size: 100% 100%;
-            background-position-x: left;
-        }
-        
-        
-        
-        </style>
-        </head>
-        <body>
-            <header>
-                <img src="imagenes/icono.png" alt="Logo" />
-                <nav>
-                    <ul>
-                        <li><a href="Home.html">Home</a></li>
-                        <li><a href="Skills.html">Skills</a></li>
-                        <li><a href="Proyects.html">Proyects</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+    </style>
+</head>
+
 <body>
-<h1> Encabezado 1</h1>
-<h2> Encabezado 2</h2>
-<h3> Encabezado 3</h3>
-<h4> Encabezado 4</h4>
-<h5> Encabezado 5</h5>
-<h6> Encabezado 6</h6>
+    <h1> Encabezado 1</h1>
+    <h2> Encabezado 2</h2>
+    <h3> Encabezado 3</h3>
+    <h4> Encabezado 4</h4>
+    <h5> Encabezado 5</h5>
+    <h6> Encabezado 6</h6>
+    <a href="/Practices.html" class="boton">Back</a>
 </body>
+
 </html>

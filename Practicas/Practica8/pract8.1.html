@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <style>
+      .boton {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 9999;
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 4px;
+      }
+  </style>
+    <title>Formulario de Inscripción</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="icono.png" />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <a href="/Practices.html" class="boton">Back</a>
+    <section class="container">
+      <p id="mtitle">FORMULARIO DE INSCRIPCIÓN</p>
+      <form>
+        <p class="titulos">DATOS PERSONALES</p>
+        <div class="datos-personales">
+          <div class="form-control">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Haga clic para insertar texto" required />
+          </div>
+          <div class="form-control">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Haga clic para insertar texto" required />
+          </div>
+          <div class="form-control">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Haga clic para insertar texto" required />
+          </div>
+          <div class="form-control">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              pattern="[0-9]{10}"
+              placeholder="Haga clic para insertar texto"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"  placeholder="Haga clic para insertar texto"required />
+          </div>
+          <div class="form-control">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="nacimiento" name="nacimiento" required />
+          </div>
+        </div>
+        <p class="titulos">CAPACITACIÓN</p>
+        <div class="capacitacion">
+          <div id="curso-horario">
+            <div class="form-control">
+              <label for="curso">Curso</label>
+              <select id="opciones" name="opciones" required>
+                <option value="" selected disabled>Elija un curso</option>
+                <option value="opcion1">Curso 1</option>
+                <option value="opcion2">Curso 2</option>
+                <option value="opcion3">Curso 3</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label for="horario">Horario</label>
+              <select id="horario" name="horario" required>
+                <option value="" selected disabled>Elija un horario</option>
+                <option value="opcion1">Horario 1</option>
+                <option value="opcion2">Horario 2</option>
+                <option value="opcion3">Horario 3</option>
+              </select>
+            </div>
+          </div>
+          <div id="dias-titulo">
+            <div class="form-control"><p id="titu-dias">Dias</p></div>
+            <div id="dias">
+              <div id="lunes">
+                <input
+                  type="checkbox"
+                  id="lunes-checkbox"
+                  name="dias"
+                  value="lunes"
+                />
+                <label for="lunes-checkbox">Lunes</label>
+              </div>
+              <div id="martes">
+                <input
+                  type="checkbox"
+                  id="martes-checkbox"
+                  name="dias"
+                  value="martes"
+                />
+                <label for="martes-checkbox">Martes</label>
+              </div>
+              <div id="miercoles">
+                <input
+                  type="checkbox"
+                  id="miercoles-checkbox"
+                  name="dias"
+                  value="miercoles"
+                />
+                <label for="miercoles-checkbox">Miércoles</label>
+              </div>
+              <div id="jueves">
+                <input
+                  type="checkbox"
+                  id="jueves-checkbox"
+                  name="dias"
+                  value="jueves"
+                />
+                <label for="jueves-checkbox">Jueves</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="titulos">❑ PLAN DE PAGO</p>
+        <div class="plan-de-pago">
+          <div id="contado-radio">
+            <div id="contado-circle">
+              <div id="radio-de-contado">
+                <input
+                  type="radio"
+                  id="contado"
+                  name="pago"
+                  value="contado"
+                  required
+                />
+              </div>
+              <label id="label-de-contado" for="contado">Contado</label>
+            </div>
+            <div class="como-paga">Moneda</div>
+          </div>
+          <div id="contado-radio">
+            <div id="contado-circle">
+              <div id="radio-de-contado">
+                <input
+                  type="radio"
+                  id="credito"
+                  name="pago"
+                  value="credito"
+                  required
+                />
+              </div>
+              <label id="label-de-contado" for="credito">Crédito</label>
+            </div>
+            <div class="como-paga">Tarjeta</div>
+          </div>
+        </div>
+        <p class="titulos">DATOS DE LA INSTITUCIÓN</p>
+        <div class="datos-personales">
+          <div class="form-control">
+            <label for="n-contrato">N° de contrato</label>
+            <input type="text" id="n-contrato" name="n-contrato" placeholder="Haga clic para insertar texto" required />
+          </div>
+          <div class="form-control">
+            <label for="pers-atendio">Persona que atendió</label>
+            <input type="text" id="pers-atendio" name="atendio" placeholder="Haga clic para insertar texto" required />
+          </div>
+          <div class="form-control">
+            <label for="fecha-atendio">Fecha de inscripción</label>
+            <input type="date" id="fecha-atendio" name="fecha-atendio" required />
+          </div>
+        </div>
+        <button class="submit-btn" type="submit">Enviar</button>
+      </form>
+    </section>
+  </body>
+</html>
