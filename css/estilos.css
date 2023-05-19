@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,11 +16,15 @@
     content: "";
     width: 40px;
     height: 40px;
+    transform: translate(-50%, -50%);
     border: 4px solid #fff;
     border-top-color: transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    z-index: 9999;
+    background-color: transparent;
 }
+
 
 @keyframes spin {
     0% {
@@ -31,6 +35,7 @@
         transform: rotate(360deg);
     }
 }
+
 
 /*Estio barra de scroll*/
 ::-webkit-scrollbar {
@@ -106,13 +111,16 @@ nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
-    transition: background-color 0.3s ease;
-    border-radius: 10px;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, #006195 90%, #006195 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms;
 }
 
 nav a:hover {
-    background-color: #666;
-    border-radius: 10px;
+    background-size: 100% 100%;
+    background-position-x: left;
 }
 
 /*Estilos hero*/
@@ -292,6 +300,11 @@ footer .icons a:hover {
     width: 100%;
 }
 
+#container-form {
+    display: flex;
+    justify-content: center;
+}
+
 .zone {
     width: 50%;
     height: auto;
@@ -371,8 +384,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: fit-content;
-    margin-inline: auto;
+    width: 60%;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -389,7 +401,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 300px;
+    width: 80%;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -421,6 +433,78 @@ textarea:focus {
 .submit-btn:hover {
     background-color: #2941b9;
 }
+
+/*--------------------Estilos de tarjetas-------------------*/
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    perspective: 1000px;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin: 10px;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.front, .back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.back p{
+    text-shadow: 4px 1px 2px rgba(0, 0, 0, 0.585);
+    margin: 10px;
+}
+
 
 /*--------------------Estilos @media-------------------*/
 /*--------------------Dejar siempre al final-------------------*/
@@ -521,6 +605,10 @@ textarea:focus {
         color: #868686;
         margin: 0;
         padding: 0;
+    }
+
+    form {
+        width: 100%;
     }
 }
 
