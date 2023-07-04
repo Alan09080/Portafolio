@@ -851,6 +851,17 @@ a.practice-link:hover {
         margin-bottom: 1.5%;
         font-size: small;
     }
+
+    #contact{
+        padding: 0;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #skills{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
 }
 
 @media screen and (orientation: landscape) {
